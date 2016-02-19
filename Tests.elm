@@ -1,7 +1,6 @@
 module Tests (..) where
 
 import ElmTest exposing (..)
-import String
 import Amount exposing (..)
 import Model exposing (..)
 
