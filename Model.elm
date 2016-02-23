@@ -32,6 +32,7 @@ init =
       Dict.empty
         |> Dict.insert "checking" (Account (Amount 0 USD_Cents) "Checking")
         |> Dict.insert "expenses" (Account (Amount 0 USD_Cents) "Expenses")
+        |> Dict.insert "income" (Account (Amount 0 USD_Cents) "Income")
   }
 
 
