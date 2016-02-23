@@ -9,6 +9,7 @@
     "exposed-modules": [],
     "dependencies": {
         "avh4-experimental/elm-layout": "2.1.0 <= v < 3.0.0",
+        "circuithub/elm-number-format": "1.0.2 <= v < 2.0.0",
         "deadfoxygrandpa/elm-test": "3.0.1 <= v < 4.0.0",
         "elm-lang/core": "3.0.0 <= v < 4.0.0",
         "evancz/elm-effects": "2.0.1 <= v < 3.0.0",

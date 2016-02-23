@@ -8,6 +8,8 @@ import Layout.StartApp
 import Effects exposing (Effects, Never)
 import Dict exposing (Dict)
 import Amount exposing (Amount)
+import Number.Format
+import Color
 
 
 type State
@@ -31,8 +33,17 @@ placeholderList list =
 view : Signal.Address Action -> State -> Layout
 view address m =
   let
+    amount a =
+      case a.currency of
+        Amount.USD_Cents ->
+          toFloat a.value
+            |> flip (/) 100
+            |> Number.Format.pretty 2 ','
+            |> (++) "$"
+            |> Layout.text { size = 24, color = Color.black }
+
     account a =
-      Layout.placeholder a.balance
+      amount a.balance
         |> Layout.left 150 (Layout.placeholder a.name)
 
     debugAction title action =
